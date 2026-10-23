@@ -1,5 +1,5 @@
- #include <iostream>
+#include <iostream>
 
- main(){
+main(){
     std::cout<<"hello world";
- }
+}
