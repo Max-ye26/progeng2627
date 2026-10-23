@@ -34,7 +34,7 @@ int main(){
     cond= false;
     x = std::rand()%8+1;
     y = std::rand()%8+1;
-    while(!((x==0||x==8)&&(y==0||y==8))){
+    while(!((x==1||x==8)&&(y==1||y==8))){
         std::cout << "The starting position is: " << x << " , " << y << std::endl;
         cond=false;
         board(x, y);
