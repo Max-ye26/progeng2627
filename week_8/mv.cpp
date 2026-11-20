@@ -1,13 +1,29 @@
 #include <iostream>
-
-// argc is the number of command line arguments
-// argv is an array of C-style strings
-// we'll see what this means more in detail later on
+#include <fstream>
+#include <cstdlib>
+#include <vector>
 
 int main(int argc, char* argv[]){
+    std::ifstream infile; 
+    infile.open(argv[1]);
 
-    for(int i = 0; i < argc; i++){
-        std::cout << argv[i] << std::endl;
+    std::vector<int> v;
+
+    if(!infile.is_open()){ 
+        std::cout << "error opening file" << std::endl;
+        return EXIT_FAILURE;
     }
+
+    int tmp;
+
+    while(infile >> tmp){
+        v.push_back(tmp); 
+
+    }
+
+    infile.close(); 
+
+
+   
 
 }
